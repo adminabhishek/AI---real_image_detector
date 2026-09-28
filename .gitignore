@@ -1,0 +1,38 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+
+# ---------- Virtual envs ----------
+venv/
+.venv/
+env/
+
+# ---------- Streamlit secrets ----------
+.streamlit/secrets.toml
+
+# ---------- Project data + checkpoints ----------
+data/
+checkpoints/
+logs/
+*.pth
+*.pt
+*.ckpt
+
+# ---------- IDE ----------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---------- OS ----------
+.env
+.env.local
+
+data/
+*.zip
+*.tar
+*.7z

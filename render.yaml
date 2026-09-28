@@ -1,0 +1,15 @@
+# Render.com deployment manifest
+# Connect at https://render.com → New → Blueprint → point to this repo
+services:
+  - type: web
+    name: deepfake-detector
+    runtime: python
+    plan: starter          # Free tier is fine for CPU; pick "plus" for GPU
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: "true"
+    autoDeploy: true       # Re-deploy on every git push to main

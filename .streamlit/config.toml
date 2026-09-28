@@ -1,0 +1,22 @@
+[theme]
+base = "dark"
+primaryColor = "#6366f1"
+backgroundColor = "#0b0f1a"
+secondaryBackgroundColor = "#141826"
+textColor = "#e6e9f2"
+font = "sans serif"
+
+[server]
+# Allow the app to be embedded in iframes (e.g. behind a reverse proxy)
+enableCORS = false
+enableXsrfProtection = false
+# Limit upload size to 200 MB — adjust for your model size
+maxUploadSize = 200
+# Headless — required for most cloud deployments
+headless = true
+# Run on a fixed port (set via $PORT env var for Streamlit Cloud / Heroku)
+port = 8501
+
+[browser]
+# Disable the "Streamlit is now running" badge
+gatherUsageStats = false
