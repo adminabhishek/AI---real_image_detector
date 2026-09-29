@@ -15,7 +15,7 @@ env/
 
 # ---------- Project data + checkpoints ----------
 data/
-checkpoints/
+
 logs/
 *.pth
 *.pt
